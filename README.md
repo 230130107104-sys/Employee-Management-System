@@ -53,7 +53,6 @@ EmployeeManagementSystem/
 - Encapsulation
 - Constructors
 - Methods
-- Abstraction
 - Data Management using ArrayList
 
 ---
@@ -65,8 +64,6 @@ Each employee record contains:
 - Employee ID
 - Employee Name
 - Department
-- Designation
-- Salary
 
 ---
 
