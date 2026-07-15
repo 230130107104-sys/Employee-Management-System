@@ -13,7 +13,9 @@ public class EmployeeApp{
             System.out.println("2. View Employee");
             System.out.println("3. Search Employee");
             System.out.println("4. Update Department");
-            System.out.println("5. Exit");
+            System.out.println("5. Delete Employee");
+            System.out.println("6. Count Employees");
+            System.out.println("7. Exit");
             System.out.println("Enter your choice: ");
 
             int choice = sc.nextInt();
@@ -23,7 +25,9 @@ public class EmployeeApp{
                 case 2 -> viewEmployee();
                 case 3 -> searchEmployee();
                 case 4 -> updateDepartment();
-                case 5 -> {
+                case 5 -> deleteEmployee();
+                case 6 -> countEmployees();
+                case 7 -> {
                     System.out.println("Exiting application. Goodbye!");
                     System.exit(0);
                 }
@@ -85,6 +89,25 @@ public class EmployeeApp{
             }
         }
         System.out.println("Employee not found.");
+    }
+
+    static void deleteEmployee() {
+        System.out.print("Enter Employee ID to delete: ");
+        int id = sc.nextInt();
+
+        for (int i = 0; i < employees.size(); i++) {
+            if (employees.get(i).id == id) {
+                employees.remove(i);
+                System.out.println("Employee deleted successfully.");
+                return;
+            }
+        }
+
+        System.out.println("Employee not found.");
+    }
+
+    static void countEmployees() {
+        System.out.println("Total Employees: " + employees.size());
     }
 
 
